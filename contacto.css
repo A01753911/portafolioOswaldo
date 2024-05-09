@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: poppins,sans-serif;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.hero-header {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: #222;
+}
+
+.wrapper {
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    padding: 40px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo i {
+    height: 45px;
+    width: 45px;
+    background-color: #007ced;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.logo .logo-text {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+
+nav .togglebtn {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 45px;
+    right: 3%;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+}
+
+nav .togglebtn span {
+    display: block;
+    background-color: #007ced;
+    margin: 5px 0;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s;
+    transition-property: transform, opacity;
+}
+
+nav .navlinks {
+    list-style-type: none;
+}
+
+nav .navlinks li {
+    display: inline-block;
+}
+
+nav .navlinks li a {
+    color: #e5e5e5;
+    margin-right: 2.5rem;
+}
+
+/* Contact Form Styles */
+#contact {
+    padding: 20px;
+    background: #333;
+    margin-top: 20px;
+    border-radius: 8px; /* Agregado para bordes redondeados */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+}
+
+#contact h2.major {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px; /* Espacio después del título */
+}
+
+form {
+    margin: 20px 0;
+}
+
+.fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre campos para evitar el uso de cálculos negativos */
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+.field.half {
+    flex-basis: calc(50% - 10px); /* Ajuste del tamaño base para campos medios */
+}
+
+.field label {
+    color: #ccc;
+    margin-bottom: 8px; /* Espacio entre la etiqueta y el campo de entrada */
+    font-size: 14px; /* Tamaño de fuente de la etiqueta */
+    font-weight: 600; /* Peso de la fuente para la etiqueta */
+}
+
+.field input[type="text"],
+.field textarea {
+    padding: 12px; /* Más padding para una mejor accesibilidad */
+    color: #333;
+    background: #fff;
+    border: 2px solid #555; /* Borde más oscuro para mejor contraste */
+    border-radius: 4px; /* Bordes redondeados para los campos */
+    font-size: 16px; /* Tamaño de fuente más grande para mejor legibilidad */
+}
+
+.field textarea {
+    resize: vertical; /* Permite redimensionar solo verticalmente */
+    height: 120px; /* Altura inicial para textareas */
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre botones */
+    margin-top: 20px; /* Espacio antes de los botones */
+}
+
+.actions input[type="submit"],
+.actions input[type="reset"] {
+    padding: 10px 25px;
+    color: #fff;
+    background: #007ced;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados para los botones */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600; /* Peso de la fuente para los botones */
+    font-size: 16px; /* Tamaño de fuente para los botones */
+}
+
+.actions input[type="submit"]:hover,
+.actions input[type="reset"]:hover {
+    background: #005da3; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de crecimiento al pasar el mouse */
+}

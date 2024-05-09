@@ -1,0 +1,223 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    color: #e5e5e5; /* General text color */
+    background: #222; /* Dark background for the entire body */
+}
+
+.hero-header {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: #222; /* Dark background for the header */
+}
+
+.wrapper {
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    padding: 40px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo i {
+    height: 45px;
+    width: 45px;
+    background-color: #007ced;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.logo .logo-text {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+
+nav .togglebtn {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 45px;
+    right: 3%;
+    z-index: 5;
+    cursor: pointer;
+    display: none; /* Ensure this is only shown when needed */
+}
+
+nav .togglebtn span {
+    display: block;
+    background-color: #007ced;
+    margin: 5px 0;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s;
+    transition-property: transform, opacity;
+}
+
+nav .navlinks {
+    list-style-type: none;
+}
+
+nav .navlinks li {
+    display: inline-block;
+}
+
+nav .navlinks li a {
+    color: #e5e5e5;
+    margin-right: 2.5rem;
+}
+
+/* Work Experience Section */
+/* Work Experience Section */
+.work-experience article {
+    background: #333;
+    padding: 20px; /* Aumentado para dar más espacio interno */
+    margin-top: 5px;
+    border-radius: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.work-experience .major {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 20px; /* Espacio antes de la imagen del título */
+    width: 100%; /* Asegura que el título ocupe todo el ancho */
+    text-align: center; /* Centra el texto */
+    font-family: 'Arial', sans-serif; /* Cambio de fuente */
+}
+
+/* Estilos de imagen y texto */
+.work-experience .image.main img {
+    width: 100%; /* Ajusta la imagen para que use todo el ancho disponible */
+    max-width: 500px; /* Límite máximo de ancho para que no se vea demasiado grande */
+    height: auto;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    display: block; /* Asegura que la imagen se trate como bloque para centrarla */
+}
+
+.work-experience p {
+    flex: 1 1 100%; /* Permite que el texto ocupe todo el ancho bajo las imágenes */
+    line-height: 1.9;
+    padding: 30px 0; /* Espacio encima y debajo del texto */
+    color: #ccc; /* Mejora la legibilidad en el fondo oscuro */
+    font-family: cursive;
+    align-content: center;
+}
+
+
+
+.image-slider {
+    width: 100%;
+    position: relative;
+}
+
+.slide {
+    display: none; /* Oculta todas las imágenes inicialmente */
+    text-align: center; /* Asegura que el contenido esté centrado */
+}
+
+.slide:first-child {
+    display: block; /* Muestra la primera imagen */
+}
+
+.slide img {
+    width: auto; /* Restablece el ancho automático para evitar estiramiento */
+    max-width: 70%; /* Reduce el tamaño máximo de la imagen al 50% del ancho del slide */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    display: inline-block; /* Asegura que la imagen se trate como bloque en línea para centrarla correctamente */
+}
+
+
+/* Respnosiv design & displaying navbar for small screen */
+@media(max-width:930px)
+{
+    nav .togglebtn{
+        display: initial;
+    }
+    /* for toggle button**/
+    .click {
+        top:45px;
+    }
+    .click span{
+        position: absolute;
+        margin-top:12px
+    }
+    .click span:first-child{
+        transform: rotate(-40deg);
+    }
+    .click span:nth-child(2)
+    {
+        opacity: 0;
+        margin:0;
+    }
+    .click span:last-child{
+        transform: rotate(45deg);
+        top:0;
+    }
+    nav .navlinks{
+        position: absolute;
+        top:110px;
+        right:-100%;
+        bottom: 0;
+        width: 60%;
+        height: 100vh;
+        background-color: #222;
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(0,0,0,0.1);
+        transition: 0.5s;
+        padding: 25px 0px;
+    }
+    nav .navlinks li{
+        display: block;
+    }
+    nav .navlinks li a{
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    nav .navlinks.open{
+        right:0;
+    }
+}
+@media(max-width:768px)
+{
+    .container{
+        flex-direction: column;
+        padding-top:2rem
+    }
+    .hero-text{
+        padding:40px 0px;
+    }
+}
